@@ -20,7 +20,17 @@ Sí, podría ser ff porque no hemos hecho más que modificar un feature en una rama
 Hacemos un git reset (no hard) al paso anterior con git reset HEAD~1. Me indica que tengo unstaged changes, lo que me da pistas sobre que mi working copy no ha variado (como quería).
 - ¿Qué comando o comandos utilizaste en el paso 28? 
 Entiendo que se refiere a los cambios del working copy.
+Como desconozco el propósito final, he usado git stash, que me descarta los cambios pero me los guarda por si hay que usarlos de nuevo. 
+He comprobado que el working copy ha perdido los cambios que originalmente había commited en la rama title, pero de los que he vuelto en el paso anterior con el reset.
+He investigado y descubierto que puedo eliminar dicho stash con stash drop cuando quiera. 
 - ¿Qué comando o comandos utilizaste en el paso 29? 
+git branch -D title
 - ¿Qué comando o comandos utilizaste en el paso 30? 
+git reflog para saber en qué referencia estaba el paso en el que hicimos el merge. 
+He hecho un git reset --hard a la referencia para recuperar el título, aunque creo que es precisamente lo que tenía en el stash por si acaso.
 - ¿Qué comando o comandos usaste en el paso 32? 
+git reflog
+git reset (ref) para volver al estado original manteniendo mi working copy
 - ¿Qué comando o comandos usaste en el punto 33?
+git reflog (aunque sigo teniéndolo en pantalla)
+git reset de la referencia de cuando pusimos título al poema. 
